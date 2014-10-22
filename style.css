@@ -1,0 +1,105 @@
+body {
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+header { 
+	margin-top: 5px;
+	background-color: gray;
+	text-align: center;
+	padding: 1px;
+}
+
+#content {
+	width: 100%;
+	text-align: center;
+}
+
+#content_wrap {
+	display: inline-block;
+	margin: 10 auto;
+}
+
+
+/* FORMULAIRE */ 
+#bill {
+	width: 850px;
+	font-size: small;
+	padding: 20px;
+}
+
+#bill p {
+	font-weight: bold;
+}
+
+.form_area_left{
+	float: left;
+}
+
+.form_area_right{
+	float: right;
+}
+
+.form_area_jump{
+	float: left;
+	width: 100%;
+}
+
+.form_element{
+	width: 410px;
+	text-align: right;
+}
+
+.element_small {
+	width: 50px;
+}
+
+.element_med {
+	width: 220px;
+}
+
+.centered {
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin: 10 auto;
+}
+
+input { 
+	width: 280px;
+}
+
+/* TABLEAU */
+table{
+	width: 100%;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+td, th {
+	border: 1px solid black;
+	width: 20%;
+	vertical-align: middle;
+}
+
+.result {
+	border: 1px solid black;
+	display: inline-block;
+	width: 100px;
+	padding: 5px;
+}
+
+.result_wrap {
+	float: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.result_wrap p {
+	width: 200px;
+	display: inline-block;
+	margin: 0px;
+}
+
+table input, table select{
+	width: 95%;
+}

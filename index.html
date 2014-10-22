@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		
+
+	</head>
+	<body>
+		
+		<header>
+			<h1>-- FACTURE --</h1>
+		</header>
+		
+		<section id="content">
+			<div id="content_wrap">
+			<form id="bill">
+			
+			<div class="form_area_jump"><br/><hr/></div>
+			
+			<!-- Facture en provenance de : -->
+			<div><div class="form_area_left">
+				<p>En provenance de :</p>
+			
+				<div class="form_element">
+					<label for="nom_societe">Nom :</label>
+					<input type="text" id="nom_societe" placeholder="de la société émmetrice" />
+				</div>
+				
+				<div class="form_element">
+					<label for="addr_societe">Addresse :</label>
+					<input type="text" id="addr_societe" placeholder="de la société émmetrice" />
+				</div>
+				
+				<div class="form_element">
+					<label for="tel_societe">Téléphone :</label>
+					<input type="text" id="tel_societe" placeholder="Numéro de la société émmetrice" />
+				</div>
+				
+				<div class="form_element">
+					<label for="fax_societe">Fax : </label>
+					<input type="text" id="fax_societe" placeholder="Numéro de la société émmetrice" />
+				</div>
+			</div>
+			
+			<div class="form_area_right">
+				<p>Suivi :</p>
+				<div class="form_element">
+					<label for="no_bill">Numéro :</label>
+					<input type="text" id="no_bill" placeholder="de facture" />
+				</div>
+				
+				<div class="form_element">
+					<label for="date_bill">Date :</label>
+					<input type="date" id="date_bill" placeholder="JJ/MM/AAAA" />
+				</div>
+				
+			</div></div>
+			
+			
+			<div class="form_area_jump"><br/><hr/></div>
+			
+			<!-- FACTURé à : -->
+			<div><div class="form_area_left">
+				<p>Facturé à :</p>
+				<div class="form_element">
+					<label for="nom_facture">Nom :</label>
+					<input type="text" id="nom_facture" placeholder="du facturé" />
+				</div>
+				
+				<div class="form_element">
+					<label for="nom_societe_facture">Nom (Soc) :</label>
+					<input type="text" id="nom_societe_facture" placeholder="de la société facturée" />
+				</div>
+				
+				<div class="form_element">
+					<label for="rue_1">Rue :</label>
+					<input type="text" id="rue_1" placeholder="Rue et compléments" />
+				</div>
+				
+				<div class="form_element">
+					<label for="cp_1">Code-postal,</label>
+					<label for="ville_1"> Ville :</label>
+					<input class="element_small" type="text" id="cp_1" placeholder="00000" />
+					<input class="element_med" type="text" id="ville_1" placeholder="Ville" />
+				</div>
+				
+				<div class="form_element">
+					<label for="tel_societe_facture">Téléphone :</label>
+					<input type="text" id="tel_societe_facture" placeholder="Numéro de la société facturée" />
+				</div>
+				
+			</div>
+			
+			<!-- EXPEDIER à : -->
+			<div class="form_area_right">
+				<p>Expedier à :</p>
+				<div class="form_element">
+					<label for="nom_facture_exp">Nom :</label>
+					<input type="text" id="nom_facture_exp" placeholder="pour expédition" />
+				</div>
+				
+				<div class="form_element">
+					<label for="nom_societe_exp">Nom (Soc) :</label>
+					<input type="text" id="nom_societe_exp" placeholder="de la société pour expedition" />
+				</div>
+				
+				<div class="form_element">
+					<label for="rue_2">Rue :</label>
+					<input type="text" id="rue_2" placeholder="Rue et compléments" />
+				</div>
+				
+				<div class="form_element">
+					<label for="cp_2">Code-postal,</label>
+					<label for="ville_2"> Ville :</label>
+					<input class="element_small" type="text" id="cp_2" placeholder="00000" />
+					<input class="element_med" type="text" id="ville_2" placeholder="Ville" />
+				</div>
+				
+				<div class="form_element">
+					<label for="tel_societe_exp">Téléphone :</label>
+					<input type="text" id="tel_societe_exp" placeholder="Numéro de la société pour expedition" />
+				</div>
+				
+			</div></div>
+			
+			<div class="form_area_jump"><br/><hr/></div>
+			
+			<!-- DETAILS : -->
+			<div class="centered"><h3>Détails des produits facturés</h3><br/></div>
+			<div class="centered">
+
+				
+				<table id="tableau">
+					<tr>
+						<th>Code Produit</th>
+						<th>Libellé Produit</th>
+						<th>Prix - unitaire</th>
+						<th>Quantité commandée</th>
+						<th>Montant</th>
+					</tr>				
+				</table>
+				
+			</div>
+			
+			<div class="form_area_jump"><br/><hr/></div>
+			
+			<div class="form_area_right">
+			<br/>
+				<div class="result_wrap" ><p>SOUS-TOTAL</p><div class="result" ><span id="soustotal" >0.00</span></div></div>
+				<div class="result_wrap" ><p>TVA 19,6%</p><div class="result" ><span id="tva" >0.00</span></div></div>
+				<div class="result_wrap" ><p>PORT et MANUTENTION</p><div class="result" ><span id="port" >0.00</span></div></div>
+				<div class="result_wrap" ><p>TOTAL DU : (TOTAL TTC)</p><div class="result" ><span id="ttc" >0.00</span></div></div>
+			<br/>
+			</div>
+			
+			</form>
+			
+		</div>
+
+		</section>
+	
+	
+	<script src="data.js" ></script>
+	<script src="sys.js" ></script>
+	<script> // LAUNCH SCRIPT
+
+	initSystem();
+
+	</script>
+
+	</body>
+
+</html>
