@@ -100,6 +100,13 @@ td, th {
 	margin: 0px;
 }
 
+#remise {
+	width: 500px;
+	font-weight: normal;
+	font-size: x-small;
+	display: none;
+}
+
 table input, table select{
 	width: 95%;
 }
