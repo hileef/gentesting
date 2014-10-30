@@ -100,10 +100,13 @@ td, th {
 	margin: 0px;
 }
 
-#remise {
+#remise, #info {
 	width: 500px;
 	font-weight: normal;
 	font-size: x-small;
+}
+
+#remise {
 	display: none;
 }
 
