@@ -1,10 +1,11 @@
+/* Balise niveau document (affecte toutes les autres balises) */
+
 body {
 	font-family: Tahoma, Geneva, sans-serif;
 }
 
 header { 
 	margin-top: 5px;
-	background-color: gray;
 	text-align: center;
 	padding: 1px;
 }
@@ -20,9 +21,9 @@ header {
 }
 
 
-/* FORMULAIRE */ 
+/* Balises niveau formulaire */ 
 #bill {
-	width: 850px;
+	width: 750px;
 	font-size: small;
 	padding: 20px;
 }
@@ -32,21 +33,39 @@ header {
 }
 
 .form_area_left{
+	text-align: left;
 	float: left;
 }
 
 .form_area_right{
+	text-align: left;
 	float: right;
 }
 
 .form_area_jump{
+	padding-bottom: 0px;
 	float: left;
 	width: 100%;
+
 }
 
 .form_element{
-	width: 410px;
+	width: 350px;
+	text-align: left;
+}
+
+#suivi .form_element{
 	text-align: right;
+}
+
+#nom_societe {
+	font-weight: bold;
+	font-size: x-large;
+	width: 100%;
+}
+
+#no_bill {
+	width: 40px;
 }
 
 .element_small {
@@ -54,7 +73,7 @@ header {
 }
 
 .element_med {
-	width: 220px;
+	width: 200px;
 }
 
 .centered {
@@ -65,10 +84,22 @@ header {
 }
 
 input { 
-	width: 280px;
+	width: 200px;
 }
 
-/* TABLEAU */
+#choix_facture {
+	width: 205px;
+}
+
+#copier {
+	width: auto;
+}
+
+hr {
+	margin-bottom: -2px;
+}
+
+/* Balises niveau tableau */ 
 table{
 	width: 100%;
 	border-spacing: 0px;
@@ -80,6 +111,16 @@ td, th {
 	width: 20%;
 	vertical-align: middle;
 }
+
+th {
+	font-style: italic;
+}
+
+table input, table select{
+	width: 95%;
+}
+
+/* Balises niveau totaux */ 
 
 .result {
 	border: 1px solid black;
@@ -97,19 +138,49 @@ td, th {
 .result_wrap p {
 	width: 200px;
 	display: inline-block;
+	text-align: right;
 	margin: 0px;
+	padding-right: 5px;
 }
 
+/* Balises niveau informations */ 
+
 #remise, #info {
-	width: 500px;
+	width: 738px;
 	font-weight: normal;
-	font-size: x-small;
+	font-size: small;
+	padding: 5px;
 }
 
 #remise {
+	border: 1px solid black;
 	display: none;
 }
 
-table input, table select{
-	width: 95%;
+#info {
+	font-size: x-small;
+}
+
+#merci {
+	margin-top: 10px;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+}
+
+#erreur {
+	display: none;
+	width: 350px;
+}
+
+#erreur_msg {
+	display: inline-block;
+	border: 1px solid red;
+	padding: 5px;
+	margin: 10px;
+	font-weight: bold;
+}
+
+#bottom_wrap {
+	width: 100%;
 }
