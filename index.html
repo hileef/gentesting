@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
 
+	<!-- Définition encodage, et lien vers page de CSS -->
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
+
+	<!-- Corps de la page -->
 	<body>
 		
+		<!-- Section Titre -->
 		<header>
 			<h1>FACTURE</h1>
 		</header>
 		
+		<!-- Section Contenu -->
 		<section id="content">
 			<div id="content_wrap">
 			<form id="bill">
 			
+			<!-- Séparateur horizontal de zone formulaire -->
 			<div class="form_area_jump"><br/></div>
 			
 			<!-- Facture en provenance de : -->
@@ -40,6 +46,7 @@
 				</div>
 			</div>
 			
+			<!-- Suivi de la facture -->
 			<div class="form_area_right" id="suivi">
 				<br/><br/><br/><br/><br/>
 				<div class="form_element">
@@ -55,7 +62,7 @@
 				
 			</div></div>
 			
-			
+			<!-- Séparateur horizontal de zone formulaire -->
 			<div class="form_area_jump"><br/></div>
 			
 			<!-- FACTURé à : -->
@@ -119,9 +126,10 @@
 				
 			</div></div>
 			
+			<!-- Séparateur horizontal de zone formulaire -->
 			<div class="form_area_jump"><br/></div>
 			
-			<!-- DETAILS : -->
+			<!-- Détails des produits facturés : -->
 			<div class="centered"><h3>Détails des produits facturés</h3><br/></div>
 			<div class="centered">
 
@@ -147,12 +155,15 @@
 				
 			</div>
 			
+			<!-- Séparateur horizontal de zone formulaire -->
 			<div class="form_area_jump"><br/><hr/></div>
 
+			<!-- Zone des messages d'erreur -->
 			<div class="form_area_left" id="erreur">
 				<span id="erreur_msg" ></span>
 			</div>
 			
+			<!-- Zone des totaux -->
 			<div class="form_area_right">
 				<div class="result_wrap" ><p>SOUS-TOTAL</p><div class="result" ><span id="soustotal" >0.00</span></div></div>
 				<div class="result_wrap" ><p>TVA 19,6%</p><div class="result" ><span id="tva" >0.00</span></div></div>
@@ -160,8 +171,10 @@
 				<div class="result_wrap" ><p>TOTAL DU (TOTAL TTC)</p><div class="result" ><span id="ttc" >0.00</span></div></div>
 			</div>
 			
+			<!-- Séparateur horizontal de zone formulaire -->
 			<div class="form_area_jump"><br/></div>
 			
+			<!-- Zone des informations bas de page : remise, infos, remerciements -->
 			<div class="form_area_left" id="bottom_wrap">
 				<div id="remise">
 				N.B. Votre facture a dépassé 1000€, vous avez obtenu pour votre prochaine facture une remise de : <span id="remiseValue">xxxx,xx</span>€ représentant 5% de votre commande ci-dessus.
@@ -182,7 +195,7 @@
 
 		</section>
 	
-	
+	<!-- Tout le script du site se trouve ci-dessous. -->
 	<script language="javascript" src="data.js" ></script>
 	<script language="javascript" src="sys.js" ></script>
 
