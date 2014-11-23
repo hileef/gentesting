@@ -1,47 +1,48 @@
 /* Balise niveau document (affecte toutes les autres balises) */
 
+/* Défini la police utilisée dans la facture */
 body {
-	font-family: Tahoma, Geneva, sans-serif;
+	font-family: Tahoma, Geneva, sans-serif; 
 }
 
 header { 
-	margin-top: 5px;
-	text-align: center;
-	padding: 1px;
+	margin-top: 5px; /* Défini une marge extérieur de 5px */
+	text-align: center; /* Centre le texte */
+	padding: 1px; /* Défini une marge intérieure de 1px */
 }
 
 #content {
-	width: 100%;
-	text-align: center;
+	width: 100%; /* Défini la largeur de la section qui contient tout le contenu de la facture */
+	text-align: center; /* Centre le texte */
 }
 
-#content_wrap {
-	display: inline-block;
-	margin: 10 auto;
+#content_wrap { 
+	display: inline-block; /* Défini le placement dans la div qui contient toutes les parties de la facture */
+	margin: 10 auto;  P/* ermet de centrer horizontalement la div */
 }
 
 
 /* Balises niveau formulaire */ 
 #bill {
-	width: 750px;
-	font-size: small;
-	padding: 20px;
+	width: 750px; /* Défini la largeur du formulaire */
+	font-size: small; /* Défini la taille de la police du formulaire */
+	padding: 20px; /* Défini une marge interne de 20 px */
 }
 
 #bill p {
-	font-weight: bold;
+	font-weight: bold; 
 }
-
+	/* Permet de placer la partie du formulaire sur la société emettrice */
 .form_area_left{
-	text-align: left;
+	text-align: left; 
 	float: left;
 }
-
+	/* Permet de placer la partie du formulaire avec la date et le numéro de facture */
 .form_area_right{
 	text-align: left;
 	float: right;
 }
-
+	/* Définit un vide qui permet la bonne séparation entre les différents élements du formulaires */
 .form_area_jump{
 	padding-bottom: 0px;
 	float: left;
@@ -50,8 +51,8 @@ header {
 }
 
 .form_element{
-	width: 350px;
-	text-align: left;
+	width: 350px; /* Défini la largeur des élements de formlaires */
+	text-align: left; /* Défini l'alignement des élements de formulaires */
 }
 
 #suivi .form_element{
@@ -100,22 +101,25 @@ hr {
 }
 
 /* Balises niveau tableau */ 
+/* Défini les propriétes du tableau */
 table{
 	width: 100%;
 	border-spacing: 0px;
 	border-collapse: collapse;
 }
 
+/* Défini les propriétés des cellules */
 td, th {
 	border: 1px solid black;
 	width: 20%;
 	vertical-align: middle;
 }
-
+/* Permet de mettre en italique la police des cellules d'en tete  */
 th {
 	font-style: italic;
 }
 
+/* Défini la largeur des élements de formulaires input et select présents dans le tableau */
 table input, table select{
 	width: 95%;
 }
@@ -145,6 +149,7 @@ table input, table select{
 
 /* Balises niveau informations */ 
 
+/* Défini les propriétés des messages de remise de la facture */
 #remise, #info {
 	width: 738px;
 	font-weight: normal;
@@ -168,6 +173,7 @@ table input, table select{
 	width: 100%;
 }
 
+/* Définit les propriétés  des messages d'erreurs */
 #erreur {
 	display: none;
 	width: 350px;
@@ -180,7 +186,7 @@ table input, table select{
 	margin: 10px;
 	font-weight: bold;
 }
-
+/* Défini la taille de la div avec les informations sur à qui envoyer la facture */
 #bottom_wrap {
 	width: 100%;
 }
