@@ -4,128 +4,122 @@
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
-		
-
 	</head>
 	<body>
 		
 		<header>
-			<h1>-- FACTURE --</h1>
+			<h1>FACTURE</h1>
 		</header>
 		
 		<section id="content">
 			<div id="content_wrap">
 			<form id="bill">
 			
-			<div class="form_area_jump"><br/><hr/></div>
+			<div class="form_area_jump"><br/></div>
 			
 			<!-- Facture en provenance de : -->
 			<div><div class="form_area_left">
-				<p>En provenance de :</p>
+				<p></p>
 			
 				<div class="form_element">
-					<label for="nom_societe">Nom :</label>
-					<input type="text" id="nom_societe" placeholder="de la société émmetrice" />
+					<input type="text" id="nom_societe" placeholder="Nom de la société émettrice" onkeyup="infos()" />
 				</div>
 				
 				<div class="form_element">
-					<label for="addr_societe">Addresse :</label>
-					<input type="text" id="addr_societe" placeholder="de la société émmetrice" />
+					<input type="text" id="addr_societe" placeholder="Addresse de la société" />
 				</div>
 				
 				<div class="form_element">
-					<label for="tel_societe">Téléphone :</label>
-					<input type="text" id="tel_societe" placeholder="Numéro de la société émmetrice" />
+					<label for="tel_societe">Téléphone </label>
+					<input type="text" id="tel_societe" placeholder="Numéro de téléphone" onkeyup="infos()"/>
 				</div>
 				
 				<div class="form_element">
-					<label for="fax_societe">Fax : </label>
-					<input type="text" id="fax_societe" placeholder="Numéro de la société émmetrice" />
+					<label for="fax_societe">Télécopie </label>
+					<input type="text" id="fax_societe" placeholder="Numéro de télécopie" />
 				</div>
 			</div>
 			
-			<div class="form_area_right">
-				<p>Suivi :</p>
+			<div class="form_area_right" id="suivi">
+				<br/><br/><br/><br/><br/>
 				<div class="form_element">
-					<label for="no_bill">Numéro :</label>
-					<input type="text" id="no_bill" placeholder="de facture" />
+					<label for="no_bill">N° DE FACTURE </label>
+					<input type="text" id="no_bill" placeholder="100" />
 				</div>
 				
 				<div class="form_element">
-					<label for="date_bill">Date :</label>
-					<input type="date" id="date_bill" placeholder="JJ/MM/AAAA" />
+					<label for="date_bill">DATE :</label>
+					<!-- A REMPLACER -->
+					<span id="date_bill"></span>
 				</div>
 				
 			</div></div>
 			
 			
-			<div class="form_area_jump"><br/><hr/></div>
+			<div class="form_area_jump"><br/></div>
 			
 			<!-- FACTURé à : -->
 			<div><div class="form_area_left">
-				<p>Facturé à :</p>
+				<p>À :</p>
+				
 				<div class="form_element">
-					<label for="nom_facture">Nom :</label>
-					<input type="text" id="nom_facture" placeholder="du facturé" />
+					<select id="choix_facture" onchange="remplirClient()" ></select>
 				</div>
 				
 				<div class="form_element">
-					<label for="nom_societe_facture">Nom (Soc) :</label>
-					<input type="text" id="nom_societe_facture" placeholder="de la société facturée" />
+					<input type="text" id="nom_facture" placeholder="Nom" onkeyup="remplirRecepteur(false);" />
 				</div>
 				
 				<div class="form_element">
-					<label for="rue_1">Rue :</label>
-					<input type="text" id="rue_1" placeholder="Rue et compléments" />
+					<input type="text" id="nom_societe_facture" placeholder="Nom de la société"  onkeyup="remplirRecepteur(false);"/>
 				</div>
 				
 				<div class="form_element">
-					<label for="cp_1">Code-postal,</label>
-					<label for="ville_1"> Ville :</label>
-					<input class="element_small" type="text" id="cp_1" placeholder="00000" />
-					<input class="element_med" type="text" id="ville_1" placeholder="Ville" />
+					<input type="text" id="rue_1" placeholder="Rue"  onkeyup="remplirRecepteur(false);" />
 				</div>
 				
 				<div class="form_element">
-					<label for="tel_societe_facture">Téléphone :</label>
-					<input type="text" id="tel_societe_facture" placeholder="Numéro de la société facturée" />
+					<input class="element_med" type="text" id="ville_1"  onkeyup="remplirRecepteur(false);" placeholder="Code postal, ville" />
+				</div>
+				
+				<div class="form_element">
+					<input type="text" id="tel_societe_facture"  onkeyup="remplirRecepteur(false);" placeholder="Numéro de téléphone" />
 				</div>
 				
 			</div>
 			
 			<!-- EXPEDIER à : -->
 			<div class="form_area_right">
-				<p>Expedier à :</p>
+				<p>EXPÉDIER À :</p>
+				
 				<div class="form_element">
-					<label for="nom_facture_exp">Nom :</label>
-					<input type="text" id="nom_facture_exp" placeholder="pour expédition" />
+					<input type="checkbox" id="copier" name="copier" onchange="remplirRecepteur();" />
+					<label for="copier">Idem à l'addresse de facturation</label>
 				</div>
 				
 				<div class="form_element">
-					<label for="nom_societe_exp">Nom (Soc) :</label>
-					<input type="text" id="nom_societe_exp" placeholder="de la société pour expedition" />
+					<input type="text" id="nom_facture_2" placeholder="Nom" />
 				</div>
 				
 				<div class="form_element">
-					<label for="rue_2">Rue :</label>
-					<input type="text" id="rue_2" placeholder="Rue et compléments" />
+					<input type="text" id="nom_societe_facture_2" placeholder="Nom de la société" />
 				</div>
 				
 				<div class="form_element">
-					<label for="cp_2">Code-postal,</label>
-					<label for="ville_2"> Ville :</label>
-					<input class="element_small" type="text" id="cp_2" placeholder="00000" />
-					<input class="element_med" type="text" id="ville_2" placeholder="Ville" />
+					<input type="text" id="rue_1_2" placeholder="Rue" />
 				</div>
 				
 				<div class="form_element">
-					<label for="tel_societe_exp">Téléphone :</label>
-					<input type="text" id="tel_societe_exp" placeholder="Numéro de la société pour expedition" />
+					<input class="element_med" type="text" id="ville_1_2" placeholder="Code postal, ville" />
+				</div>
+				
+				<div class="form_element">
+					<input type="text" id="tel_societe_facture_2" placeholder="Numéro de téléphone" />
 				</div>
 				
 			</div></div>
 			
-			<div class="form_area_jump"><br/><hr/></div>
+			<div class="form_area_jump"><br/></div>
 			
 			<!-- DETAILS : -->
 			<div class="centered"><h3>Détails des produits facturés</h3><br/></div>
@@ -139,33 +133,48 @@
 						<th>Prix - unitaire</th>
 						<th>Quantité commandée</th>
 						<th>Montant</th>
-					</tr>				
+					</tr>
+
+					<TR id="ligne-0" >
+						<TD><select id="code-0" onchange="remplir(0)" ></select></TD>
+						<TD><span id="lib-0" >-</span></TD>
+						<TD><span id="price-0" >-</span></TD>
+						<TD><input type="text" id="qte-0" placeholder="Quantité" onkeyup="montant(0);" /></TD>
+						<TD><span id="mnt-0" >-</span></TD>
+					</TR>
+					
 				</table>
 				
 			</div>
 			
 			<div class="form_area_jump"><br/><hr/></div>
+
+			<div class="form_area_left" id="erreur">
+				<span id="erreur_msg" ></span>
+			</div>
 			
 			<div class="form_area_right">
-			<br/>
 				<div class="result_wrap" ><p>SOUS-TOTAL</p><div class="result" ><span id="soustotal" >0.00</span></div></div>
 				<div class="result_wrap" ><p>TVA 19,6%</p><div class="result" ><span id="tva" >0.00</span></div></div>
 				<div class="result_wrap" ><p>PORT et MANUTENTION</p><div class="result" ><span id="port" >0.00</span></div></div>
-				<div class="result_wrap" ><p>TOTAL DU : (TOTAL TTC)</p><div class="result" ><span id="ttc" >0.00</span></div></div>
-			<br/>
+				<div class="result_wrap" ><p>TOTAL DU (TOTAL TTC)</p><div class="result" ><span id="ttc" >0.00</span></div></div>
 			</div>
 			
-			<div class="form_area_left">
-			<br/>
-				<div id="remise"><p>
-				N.B. Votre facture a dépassé 1000 euros, vous avez obtenu pour votre prochaine facture une remise de : <span id="remiseValue">xxx,xx</span> représentant 5% de votre commande ci-dessus.</p>
+			<div class="form_area_jump"><br/></div>
+			
+			<div class="form_area_left" id="bottom_wrap">
+				<div id="remise">
+				N.B. Votre facture a dépassé 1000€, vous avez obtenu pour votre prochaine facture une remise de : <span id="remiseValue">xxxx,xx</span>€ représentant 5% de votre commande ci-dessus.
 			</div><div id="info" >
 				<p>
-				Veuillez rédiger tous les chèques à l'ordre de <span id="discname">[nomsociété]</span>. Pour toute question concerant cette facture, veuillez contacter MARTIN au <span id="disctel">[numerotel]</span> ou à l'addresse <span id="disaddr">[addresse de messagerie]</span>.</p><p>
-				NOUS VOUS REMERCIONS DE VOTRE CONFIANCE
+				Veuillez rédiger tous les chèques à l'ordre de <span id="discname">[Nom de la société]</span>.<br/> Pour toute question concerant cette facture, veuillez contacter MARTIN au <span id="disctel">[Numéro de téléphone]</span> ou à l'addresse <span id="disaddr">[Addresse de messagerie]</span>.</p><p>
 				</p>
-			<br/></div>
+			</div><div id="merci" >
+				NOUS VOUS REMERCIONS DE VOTRE CONFIANCE
 			</div>
+			</div>
+			
+			
 			
 			</form>
 			
@@ -174,13 +183,8 @@
 		</section>
 	
 	
-	<script src="data.js" ></script>
-	<script src="sys.js" ></script>
-	<script> // LAUNCH SCRIPT
-
-	initSystem();
-
-	</script>
+	<script language="javascript" src="data.js" ></script>
+	<script language="javascript" src="sys.js" ></script>
 
 	</body>
 
