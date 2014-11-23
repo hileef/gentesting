@@ -1,106 +1,108 @@
-/* Balise niveau document (affecte toutes les autres balises) */
+/* *** Balise niveau document (affecte toutes les autres balises) */
 
 /* Défini la police utilisée dans la facture */
 body {
 	font-family: Tahoma, Geneva, sans-serif; 
 }
 
+/* Défini les propriétés du header contenant le titre facture */
 header { 
-	margin-top: 5px; /* Défini une marge extérieur de 5px */
-	text-align: center; /* Centre le texte */
-	padding: 1px; /* Défini une marge intérieure de 1px */
+	margin-top: 5px; 
+	text-align: center; 
+	padding: 1px; 
 }
 
+/* Défini les propriétés du conteneur de la boite contenant toute la facture */
 #content {
-	width: 100%; /* Défini la largeur de la section qui contient tout le contenu de la facture */
-	text-align: center; /* Centre le texte */
+	width: 100%; 
+	text-align: center; 
 }
 
+/* Défini les propriétés de la boite contenant toute la facture */
 #content_wrap { 
-	display: inline-block; /* Défini le placement dans la div qui contient toutes les parties de la facture */
-	margin: 10 auto;  P/* ermet de centrer horizontalement la div */
+	display: inline-block; 
+	margin: 10 auto;  
 }
 
 
-/* Balises niveau formulaire */ 
+/* *** Balises niveau formulaire */
+/* Défini les propriétés du formulaire */
 #bill {
-	width: 750px; /* Défini la largeur du formulaire */
-	font-size: small; /* Défini la taille de la police du formulaire */
-	padding: 20px; /* Défini une marge interne de 20 px */
+	width: 750px; 
+	font-size: small;
+	padding: 20px; 
 }
-
+/* Défini les propriétés du texte du formulaire */
 #bill p {
 	font-weight: bold; 
 }
-	/* Permet de placer la partie du formulaire sur la société emettrice */
+/* Permet de placer une partie du formulaire sur la gauche */
 .form_area_left{
 	text-align: left; 
 	float: left;
 }
-	/* Permet de placer la partie du formulaire avec la date et le numéro de facture */
+/* Permet de placer une partie du formulaire sur la droite */
 .form_area_right{
 	text-align: left;
 	float: right;
 }
-	/* Définit un vide qui permet la bonne séparation entre les différents élements du formulaires */
+/* Définit un vide qui permet la bonne séparation entre les différents élements du formulaires */
 .form_area_jump{
 	padding-bottom: 0px;
 	float: left;
 	width: 100%;
 
 }
-
+/* Défini les propriétés d'un élément du formulaire */
 .form_element{
-	width: 350px; /* Défini la largeur des élements de formlaires */
-	text-align: left; /* Défini l'alignement des élements de formulaires */
+	width: 350px; 
+	text-align: left; 
 }
-
+/* Défini les propriétés d'un élément du formulaire à l'intérieur de la balise suivi
+	(pour le n0 de facture et la date) */
 #suivi .form_element{
 	text-align: right;
 }
-
+/* Défini les propriétés du nom de société */
 #nom_societe {
 	font-weight: bold;
 	font-size: x-large;
 	width: 100%;
 }
-
+/* Défini les propriétés du numéro de facture */
 #no_bill {
 	width: 40px;
 }
-
+/* Défini les propriétés d'un élément du formulaire de type petit */
 .element_small {
 	width: 50px;
 }
-
+/* Défini les propriétés d'un élément du formulaire de type moyen */
 .element_med {
 	width: 200px;
 }
-
+/* Défini les propriétés d'un élément centré du formulaire */
 .centered {
 	float: left;
 	width: 100%;
 	text-align: center;
 	margin: 10 auto;
 }
-
+/* Défini les propriétés d'un input du formulaire */
 input { 
 	width: 200px;
 }
-
+/* Défini les propriétés de la liste de clients du formulaire */
 #choix_facture {
 	width: 205px;
 }
-
+/* Défini les propriétés de la case a cocher du formulaire */
 #copier {
 	width: auto;
 }
 
-hr {
-	margin-bottom: -2px;
-}
 
-/* Balises niveau tableau */ 
+/* *** Balises niveau tableau */ 
 /* Défini les propriétes du tableau */
 table{
 	width: 100%;
@@ -123,9 +125,13 @@ th {
 table input, table select{
 	width: 95%;
 }
+/* Défini les propriétés de la barre de separation */
+hr {
+	margin-bottom: -2px;
+}
 
-/* Balises niveau totaux */ 
-
+/* *** Balises niveau totaux */ 
+/* Défini les propriétés des totaux (soustotal, tva, etc...) */
 .result {
 	border: 1px solid black;
 	display: inline-block;
@@ -133,12 +139,14 @@ table input, table select{
 	padding: 5px;
 }
 
+/* Défini l'alignement des totaux (soustotal, tva, etc...) */
 .result_wrap {
 	float: none;
 	margin: 0px;
 	padding: 0px;
 }
 
+/* Défini les propriétés du texte à coté des totaux (soustotal, tva, etc...) */
 .result_wrap p {
 	width: 200px;
 	display: inline-block;
@@ -147,9 +155,9 @@ table input, table select{
 	padding-right: 5px;
 }
 
-/* Balises niveau informations */ 
+/* *** Balises niveau informations */ 
 
-/* Défini les propriétés des messages de remise de la facture */
+/* Défini les propriétés des messages de remise, de remerciement et des informations de la facture */
 #remise, #info {
 	width: 738px;
 	font-weight: normal;
@@ -157,15 +165,18 @@ table input, table select{
 	padding: 5px;
 }
 
+/* Défini les propriétés supplémentaires des messages de remise de la facture */
 #remise {
 	border: 1px solid black;
 	display: none;
 }
 
+/* Défini les propriétés supplémentaires des messages des informations de la facture */
 #info {
 	font-size: x-small;
 }
 
+/* Défini les propriétés supplémentaires des messages de remerciement de la facture */
 #merci {
 	margin-top: 10px;
 	font-weight: bold;
@@ -173,12 +184,13 @@ table input, table select{
 	width: 100%;
 }
 
-/* Définit les propriétés  des messages d'erreurs */
+/* Définit les propriétés du conteneur des messages d'erreurs */
 #erreur {
 	display: none;
 	width: 350px;
 }
 
+/* Définit les propriétés du texte pour afficher les messages d'erreurs */
 #erreur_msg {
 	display: inline-block;
 	border: 1px solid red;
